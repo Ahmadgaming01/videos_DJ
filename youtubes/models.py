@@ -2,10 +2,11 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
 from taggit.managers import TaggableManager
+from django.utils.translation import gettext_lazy as _
 # Create your models here.
 
 class Video (models.Model):
-    video = models.URLField(blank=True , null= True)
+    video = models.URLField(blank=True , null= True , verbose_name="Video Url")
     title = models.CharField(max_length=500)
     author = models.ForeignKey(User , related_name='user_video' , on_delete=models.CASCADE )
     crate_date = models.DateTimeField( default= timezone.now() ,blank=True)
