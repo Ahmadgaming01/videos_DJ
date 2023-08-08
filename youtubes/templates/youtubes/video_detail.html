@@ -5,12 +5,15 @@
   
 
 <div class="container  ">
+
+    
     <h1>{{ object.title }}</h1>
-    <iframe class="w-100"
+    <iframe class="d-flex"
     src="{{object.video}}">
     </iframe>
-    <p> views {{object.views}}</p> <span></span>
+    <p style="display: inline-block;"> views {{object.views}}</p> <span style="display: inline-block;" > like</span> <span style="display: inline-block;" >dislike</span>
     <p> publish date : {{object.crate_date}} </p>
+    
     
     
 

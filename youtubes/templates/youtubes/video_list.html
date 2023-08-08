@@ -1,25 +1,23 @@
 {% extends 'base.html' %}
 
-
-
-
 {% block body %}
-<h1 class="p-5">Viedo List</h1>
+<h1 style="text-align: center;">Viedo List</h1>
 
 
 
 
-<div class="container">
+<div class="container  ">
 {% for object in video_list %}
-<div class="col-3">
 
+<a href="" style="display: inline-block; text-decoration: none;">
+    <h4 style="text-align: center;"> {{object.title}} </h4>
     <iframe width="300" height="200"
     src="{{object.video}}">
     </iframe>
+</a>
 
-
-</div>
 {% endfor %}
+
 </div>
 
 {% endblock body %}
