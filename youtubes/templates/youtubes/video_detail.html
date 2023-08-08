@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+  
+
+<div class="container  ">
+    <h1>{{ object.title }}</h1>
+    <iframe class="w-100"
+    src="{{object.video}}">
+    </iframe>
+    <p> views {{object.views}}</p> <span></span>
+    <p> publish date : {{object.crate_date}} </p>
+    
+    
+
+</div>
+
+{% endblock body %}
